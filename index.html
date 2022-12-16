@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecture 61 - News Assignment Solutions</title>
+    <style></style>
+    <script></script>
+  </head>
+  <body>
+    <form>
+      <input type="text" name="news" />
+      <input type="submit" onclick="saveData(event)" />
+
+      <input type="button" value="submit" />
+      <!-- type=submit me page refreesh hoga.
+           type=button me refresh nahi hota.
+           onclick is the event handelar-->
+    </form>
+    <p id="mynews"></p>
+
+    <script>
+      //functions are reusable block of code.
+      //1.function defination (one time process)
+      //2.function calling(many time process)
+
+      let n = document.querySelector('input[name="news"]');
+      let mynews1 = document.getElementById("mynews");
+
+      function saveData(e) {
+        //formal argument
+        //function body
+        e.preventDefault();
+        console.log(n.value);
+        mynews1.innerHTML += " " + n.value;
+      }
+    </script>
+  </body>
+</html>
